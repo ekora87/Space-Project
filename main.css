@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .date-box {
+    margin: 20px 0;
+  }
+  
+  .image {
+    width: 600px;
+    height: auto;
+    margin: 5px;
+  }
