@@ -7,7 +7,7 @@
     });
 
 function getDogImage(input) {
-  fetch(`https://api.nasa.gov/planetary/apod?date=${input}&api_key=DEMO_KEY`)
+  fetch(`https://api.nasa.gov/planetary/apod?date=${input}&api_key=G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb`)
     .then(response => response.json())
     .then(responseJson => 
       displayResults(responseJson))
@@ -19,7 +19,7 @@ function displayResults(responseJson) {
   //replace the existing image with the new one
 
   $('.image-container').append(
-    `<h4>Date: ${responseJson.date}</h4><h4>Title: ${responseJson.title}</h4><p>${responseJson.explanation}</p><img src="${responseJson.url}" class="image">`
+    `<h3>Title: ${responseJson.title}</h3><h4>Date: ${responseJson.date}</h4><p>${responseJson.explanation}</p><img src="${responseJson.hdurl}" class="image">`
   )
 
 

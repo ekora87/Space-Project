@@ -3,17 +3,32 @@
   }
   
   body {
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
     line-height: 25px;
     font-family: 'Roboto', sans-serif;
   }
+
+  h1 {
+      color: #0069D9;
+  }
+
   
   .date-box {
     margin: 20px 0;
   }
   
   .image {
-    width: 600px;
+    width: 100%;
     height: auto;
-    margin: 5px;
+  }
+
+  .submit-btn {
+      margin-bottom: 20px;
+  }
+
+  h4 {
+      margin: 20px 0;
+      color: grey;
   }
