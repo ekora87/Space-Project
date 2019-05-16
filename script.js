@@ -60,9 +60,25 @@ function watchMARSForm() {
   });
 }
 
+function displayAPOD() {
+  $('main').append(`<div class="container">
+  <h1>Astronomy Picture of the Day</h1>
+  <div class="image-container"></div>
+</div>`);
+}
+
+
+function renderAPOD() {
+  $('#apod-btn').click(function() {
+    alert("click");
+    displayAPOD();
+  });
+}
+
 
 $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
   watchMARSForm();
+  renderAPOD();
 });
