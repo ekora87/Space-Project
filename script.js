@@ -67,11 +67,24 @@ function displayAPOD() {
 </div>`);
 }
 
-
 function renderAPOD() {
   $('#apod-btn').click(function() {
-    alert("click");
+    $('.container').empty();
     displayAPOD();
+  });
+}
+
+function displayRover() {
+  $('main').append(`<div class="container">
+  <h1>Mars Rover Photos</h1>
+  <div class="mars-image-container"></div>
+</div>`);
+}
+
+function renderRover() {
+  $('#rovers-btn').click(function() {
+    $('.container').empty();
+    displayRover();
   });
 }
 
@@ -81,4 +94,5 @@ $(function() {
   watchForm();
   watchMARSForm();
   renderAPOD();
+  renderRover();
 });
