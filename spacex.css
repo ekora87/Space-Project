@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: black;
+  }
+
+  .logo {
+    width: 300px;
+    height: auto;
+  }
+  
+  .mission-patch {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .mission{
+    margin-top: 10px;
+  }
+
+  .mission-details {
+    margin-top: 30px;
+  }
+
+  .mission > a {
+    text-decoration: none;
+  }
+  
+  .mission-container {
+    width: 300px;
+    height: 320px;
+    margin: 20px auto;
+    background-color: black;
+  }
+  .mission-container, .mission-details{
+    border: 2px solid #005288;
+    border-radius: 5px;
+  }
+  
+  .mission-details {
+    line-height: 2em;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .flight-number, .name{
+    background-color: #005288;
+    color: white;
+  }
+
+  .mission-name {
+    color: white;
+  }
+  
+  .mission-images > img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+  }
+  
+  .mission-images {
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
+  
+  .mission-details > ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+    margin: 0 5px;
+  }
+  
+  .mission-details > li {
+    margin: 5px 0;
+  }
+  
+  .bold-text {
+    font-weight: bolder;
+    padding-right: 3px;
+    color: grey;
+  }  
+    
+  .individual-mission {
+    margin: 0 auto;
+  }
+
+  .individual-mission > img {
+    margin-top: 20px;
+  }
+.mySlides {
+  display: none;
+}
+
+.images {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slide-control, .video-container > h3 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid #005288;
+    background-color: #005288;
+    color: white;
+    padding: 20px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.video-image-container {
+  margin: 20px 0;
+}
+.video-container > h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.video-container {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+.video {
+  border: 1px solid #005288;
+  background-color: black;
+  padding-bottom: 20px;
+  color: white;
+}
+
+#results-list {
+  height: auto;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
+  @media only screen and (min-width: 768px) {
+    body {
+      width: 90%;
+      height: 100%;
+      background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('http://i.imgur.com/Nssk73Q.png');
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .mission-container {
+      background-color: transparent;
+    }
+
+    .mission-name {
+      color: black;
+    }
+    
+    .mission {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 200px;
+    }
+
+    .individual-mission {
+      margin-top: 200px;
+    }
+
+    .mission-images > img {
+      width: 70%;
+      max-height: 400px;
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .mission-details {
+      width: 50%;
+      margin: 30px auto;
+    }
+    .mission-details > ul {
+      text-align: center;
+    }
+    .mission-images {
+      width: 45%;
+      height: 100%;
+    }
+
+    .images {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .video-container {
+      width: 45%;
+      margin-top: 0;
+    }
+
+    .video-image-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .individual-mission {
+      margin-top: 150px;
+    }
+  }
