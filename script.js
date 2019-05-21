@@ -20,7 +20,7 @@ function displayAPODResults(responseJson) {
   console.log(responseJson);
   //replace the existing image with the new one
 
-  $('.image-container').append(
+  $('.apod-container').append(
     `<h3>Title: ${responseJson.title}</h3><h4>Date: ${responseJson.date}</h4><p>${responseJson.explanation}</p><img src="${responseJson.hdurl}" class="image">`
   )
 }
@@ -28,7 +28,7 @@ function displayAPODResults(responseJson) {
 function watchForm() {
   $('.apod-form').submit(event => {
     event.preventDefault();
-    $('.image-container').empty();
+    $('.apod-container').empty();
     let date = $('#tbDate').val();
     getAPODImage(date);
   });
@@ -52,7 +52,7 @@ function displayMARSResults(responseJson){
 }
 
 function watchMARSForm() {
-  $('.apod-form').submit(event => {
+  $('.mars-form').submit(event => {
     event.preventDefault();
     $('.mars-image-container').empty();
     let date = $('#tbDate').val();
@@ -93,6 +93,6 @@ $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
   watchMARSForm();
-  renderAPOD();
-  renderRover();
+  // renderAPOD();
+  // renderRover();
 });
