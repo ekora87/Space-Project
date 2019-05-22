@@ -9,6 +9,7 @@
   }
   
   body {
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     line-height: 25px;
@@ -58,3 +59,26 @@
   .mars-image-container {
     background-color: black;
   }
+
+  .individual-rover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .rover-container {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .rover-image {
+    width: 400px;
+    height: 300px;
+  }
+
+  .rover-container > ul {
+    list-style-type: none;
+    padding: 0 10px;
+  }
+
+  
