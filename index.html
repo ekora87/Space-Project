@@ -7,49 +7,35 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
 </head>
 <body>
-    <main>
-        <header>
+    <main role="main">
+        <header role="heading">
             <h1>Choose A Topic</h1>
         </header>
-        <section class="section-container">
+        <section class="section-container" role="region">
         <div class="topic-container">
           <a href="apod.html">
           <h3 class="topic-name">Astronomy Picture of the Day</h3>
           <p class="description">Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
-          <img class="topic-image" id="apod-image" src="https://image.winudf.com/v2/image/YXBvZC5uYXNhLndhbGxwYXBlcl9zY3JlZW5fM18xNTI0NTE5NDY2XzAzMg/screen-3.jpg?h=800&fakeurl=1&type=.jpg" alt="galaxy picture">
+          <img class="topic-image" src="https://image.winudf.com/v2/image/YXBvZC5uYXNhLndhbGxwYXBlcl9zY3JlZW5fM18xNTI0NTE5NDY2XzAzMg/screen-3.jpg?h=800&fakeurl=1&type=.jpg" alt="galaxy picture">
           </a>
         </div>
         <div class="topic-container">
             <a href="marsrover.html">
             <h3 class="topic-name">Mars Rover Photos</h3>
             <p class="description">A collection of images and data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars.</p>
-            <img class="topic-image" id="rover-image" src="https://mars.nasa.gov/system/resources/detail_files/22053_PIA22109-16.jpg" alt="rover picture">
+            <img class="topic-image" src="https://mars.nasa.gov/system/resources/detail_files/22053_PIA22109-16.jpg" alt="rover picture">
             </a>
           </div>
           <div class="topic-container">
               <a href="spacex-index.html">
               <h3 class="topic-name">SpaceX Missions</h3>
               <p class="description">Details, Pictures and Videos of each SpaceX Mission.</p>
-              <img class="topic-image" id="apod-image" src="https://si.wsj.net/public/resources/images/S1-CO811_spacex_M_20190522210954.jpg" alt="spaceX picture">
+              <img class="topic-image" src="https://si.wsj.net/public/resources/images/S1-CO811_spacex_M_20190522210954.jpg" alt="spaceX picture">
               </a>
             </div>
       </section>
-    <!-- <article class="earth-demo">
-        <div class="earth">
-          <img src="https://cssanimation.rocks/images/random/earth.png">
-        </div>
-        <div class="moon-container">
-          <div class="moon">
-            <img src="https://cssanimation.rocks/images/random/moon.png">
-          </div>
-        </div>
-    </article> -->
     </main>
     <script src="home.js"></script>
 </body>

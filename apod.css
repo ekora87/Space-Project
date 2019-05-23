@@ -41,6 +41,10 @@ h1 {
   margin: 20px 0;
 }
 
+.submit-btn:hover {
+  cursor: pointer;
+}
+
 .image {
   width: 100%;
   max-width: 400px;

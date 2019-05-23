@@ -10,6 +10,9 @@
     color: black;
   }
 
+  body > h2 {
+    margin-bottom: 0;
+  }
   .logo {
     width: 300px;
     height: auto;
@@ -45,13 +48,13 @@
     background-color: black;
   }
   .mission-container, .mission-details{
-    border: 2px solid #005288;
+    border: 3px solid black;
     border-radius: 5px;
   }
   
   .mission-details {
     line-height: 2em;
-    background-color: black;
+    background: rgba(204, 204, 204, 0.5);
     color: white;
     margin-bottom: 20px;
   }
@@ -82,16 +85,19 @@
     text-align: left;
     padding-left: 0;
     margin: 0 5px;
+    font-weight: bolder;
+    color: black;
   }
   
   .mission-details > li {
     margin: 5px 0;
+    
   }
   
   .bold-text {
     font-weight: bolder;
     padding-right: 3px;
-    color: grey;
+    color: red;
   }  
     
   .individual-mission {
@@ -128,7 +134,7 @@
 .slide-control, .video-container > h3 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-top: 1px solid #005288;
+    border: 2px solid black;
     background-color: #005288;
     color: white;
     padding: 20px;
@@ -176,10 +182,11 @@
 }
 
 .video {
-  border: 1px solid #005288;
-  background-color: black;
+  border: 2px solid black;
+  border-top: 0;
+  background: rgba(204, 204, 204, 0.5);
   padding-bottom: 20px;
-  color: white;
+  color: black;
 }
 
 #results-list {
@@ -200,13 +207,16 @@ hr {
 
   @media only screen and (min-width: 768px) {
     body {
-      width: 90%;
       height: 100%;
       background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('http://i.imgur.com/Nssk73Q.png');
       background-position: center;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
+    }
+
+    body > h2 {
+      margin-top: 150px;
     }
 
     .logo {
@@ -226,7 +236,7 @@ hr {
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-top: 200px;
+      /* margin-top: 200px; */
     }
 
     .individual-mission {
@@ -241,6 +251,10 @@ hr {
   }
 
   @media only screen and (min-width: 1024px) {
+    body > h2 {
+      margin-top: 200px;
+    }
+
     .mission-details {
       width: 50%;
       margin: 30px auto;

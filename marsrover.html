@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars Rover Pictures</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="rover.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
-
+    <link rel="stylesheet" href="rover.css">
 </head>
 <body>
   <main>
-        <header>
+        <header role="heading">
           <h1>Mars Rover Pictures</h1>
         </header>
         <h2>Select A Rover</h2>
-        <section class="date-section hidden">
+        <section class="date-section hidden" role="region">
                 <h3>Pick A Date:</h3>
                 <p class="curiosity-date">Please select a date between 2012-08-06 and "current date" to view pictures.</p>
                 <p class="opportunity-date">Please select a date between 2004-01-25 and 2018-06-11 to view pictures.</p>
@@ -28,38 +23,36 @@
                 <div class="date-box">
                     <input type="text" id="tbDate" placeholder="YYYY-MM-DD" />
                 </div>
-                <input type="submit" class="submit-btn" value="Submit">
+                <input type="submit" class="submit-btn" value="Submit" role="button">
             </form>
             </section>
 
-        <section class="individual-rover">
-        <article class="rover-image-container" id="curiosity-div">
+        <section class="individual-rover" role="region">
+        <article class="rover-image-container" id="curiosity-div" role="article">
         <div class="rover-header">
           <h3 class="rover-name">Curiosity</h3>
           <h4 class="active-status">ACTIVE</h4>
-          <img class="rover-image" id="curiosity" src="https://cdn.mos.cms.futurecdn.net/izXa9hiiSTbnNtwSp2ixKC.jpg">
+          <img class="rover-image" id="curiosity" src="https://cdn.mos.cms.futurecdn.net/izXa9hiiSTbnNtwSp2ixKC.jpg" alt="rover curiosity">
         </div>
         </article>
-        <article class="rover-image-container" id="opportunity-div">
+        <article class="rover-image-container" id="opportunity-div" role="article">
             <div class="rover-header">
             <h3 class="rover-name">Opportunity</h3>
             <h4 class="complete-status">COMPLETE</h4>
-            <img class="rover-image" id="opportunity" src="https://pressfrom.info/upload/images/real/2018/10/30/nasa-is-still-holding-out-hope-for-the-mars-opportunity-rover__141568_.jpg?content=1">
+            <img class="rover-image" id="opportunity" src="https://pressfrom.info/upload/images/real/2018/10/30/nasa-is-still-holding-out-hope-for-the-mars-opportunity-rover__141568_.jpg?content=1" alt="rover opportunity">
             </div>
         </article>
-        <article class="rover-image-container" id="spirit-div">
+        <article class="rover-image-container" id="spirit-div" role="article">
         <div class="rover-header">
             <h3 class="rover-name">Spirit</h3>
             <h4 class="complete-status">COMPLETE</h4>
-            <img class="rover-image" id="spirit" src ="https://solarsystem.nasa.gov/system/content_pages/main_images/1068_rover2-1.jpg">
+            <img class="rover-image" id="spirit" src ="https://solarsystem.nasa.gov/system/content_pages/main_images/1068_rover2-1.jpg" alt="rover spirit">
         </div>
         </article>
         </section>
         <section class="mars-image-container"></section>
-
-
-  
-  </main>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
