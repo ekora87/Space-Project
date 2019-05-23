@@ -106,17 +106,10 @@
     background-color: red;
   }
 
-
-
   .mars-image {
     width: 100px;
     height: 100px;
     margin: 5px;
-  }
-
-  .apod-container {
-    background-color: black;
-    color: white;
   }
   
   .rover-container {
@@ -143,6 +136,10 @@
 
   .rover-header {    
     text-align: center;
+  }
+
+  .rover-header:hover {
+    opacity: 0.5;
   }
 
   .rover-image-container {

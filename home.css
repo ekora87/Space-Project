@@ -18,54 +18,6 @@ h1 {
     margin: 30px auto;
 }
 
-.earth {
-    position: absolute;
-    top: calc(70% - 100px);
-    left: calc(50% - 100px);
-  }
-
-.earth img {
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-}
-
-.moon-container {
-    position: absolute;
-      top: calc(70% - 25px);
-      left: calc(50% - 25px);
-  }
-
-  .moon {
-    animation: spin 20s linear infinite;
-    background: none;
-    height: 50px;
-    pointer-events: none;
-    transform-origin: 25px;
-    width: 50px;
-  }
-
-  .moon img {
-    height: 50px;
-    transform: translateX(-100px) translateY(-100px);
-    width: 50px;
-  }
-
-  .earth img, .moon img {
-    border-radius: 50%;
-    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
-  }
-
-  @keyframes spin {
-    to {
-      transform: rotateZ(360deg);
-    }
-  }
-
-
-
 .section-container {
   margin-top: 30px;
   display: flex;
@@ -107,23 +59,15 @@ a >  h3 {
   text-decoration: none;
   color: white;
 }
-/* .section-container {
-  display: none;
-} */
+
+a:hover {
+  opacity: 0.70;
+}
 
 @media only screen and (min-width: 768px) and (min-height: 1024px){
   body {
     height: 1500px;
   }
-
- 
-  /* .link-container > a {
-    margin: 50px auto;
-    padding: 20px 0;
-    font-size: 25px;
-  } */
-
-
 }
 @media only screen and (min-width: 1200px) {
   .section-container {
@@ -131,10 +75,7 @@ a >  h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
   }
-
- 
 
   .topic-container {
     width: 30%;
@@ -143,50 +84,4 @@ a >  h3 {
   .topic-image {
     height: 300px;
   }
-
- 
 }
-
-
-/* @media only screen and (min-width: 1024px) and (min-height: 1366px){
-  /* .moon {
-    height: 50px;
-    width: 50px;
-  } */
-
-  /* .section-container {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .topic-container {
-    width: 100%;
-    margin: 30px 0;
-  }
-
-  .topic-image {
-    width: 100%;
-    height: auto;
-  } */
-  .moon img {
-    height: 50px;
-    transform: translateX(-125px) translateY(-125px);
-    width: 50px;
-  }
-
-  .earth img {
-    height: 250px;
-    width: 250px;
-  }
-
-  .earth {
-    position: absolute;
-    top: calc(68% - 100px);
-    left: calc(49% - 100px);
-  }
-
-  
-
-} */
