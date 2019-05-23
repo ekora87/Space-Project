@@ -3,14 +3,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 900px;
-    overflow: hidden;
+    background-attachment: fixed;
+    height: auto;
     text-align: center;
 }
 
 h1 {
     color: white;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .link-container > a {
     display: block;
@@ -64,51 +64,112 @@ h1 {
     }
   }
 
+
+
+.section-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 .topic-image {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  bottom: 0;
+  width: 100%;
+  height: auto;
 }
-.container {
+
+.topic-container > a {
+  color: white;
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 100%;
+}
+
+a >  h3 {
+  background-color: #0A7DFA;
+  padding: 10px;
+  width: 100%;
+}
+
+.description {
+  margin: 20px 0;
+  font-size: 1.5em;
+}
+
+.topic-container > a {
+  text-decoration: none;
+  color: white;
+}
+/* .section-container {
   display: none;
-}
+} */
 
 @media only screen and (min-width: 768px) and (min-height: 1024px){
   body {
     height: 1500px;
   }
 
-  .link-container > a {
+ 
+  /* .link-container > a {
     margin: 50px auto;
     padding: 20px 0;
     font-size: 25px;
-  }
+  } */
 
 
 }
-@media only screen and (min-width: 1024px) {
-  .container {
+@media only screen and (min-width: 1200px) {
+  .section-container {
+    margin: 50px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
   }
 
+ 
+
   .topic-container {
-    background-color: white;
-    color: black;
-    margin: 50px;
+    width: 30%;
   }
+
+  .topic-image {
+    height: 300px;
+  }
+
+ 
 }
 
 
-@media only screen and (min-width: 1024px) and (min-height: 1366px){
+/* @media only screen and (min-width: 1024px) and (min-height: 1366px){
   /* .moon {
     height: 50px;
     width: 50px;
   } */
 
+  /* .section-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .topic-container {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .topic-image {
+    width: 100%;
+    height: auto;
+  } */
   .moon img {
     height: 50px;
     transform: translateX(-125px) translateY(-125px);
@@ -128,4 +189,4 @@ h1 {
 
   
 
-}
+} */
