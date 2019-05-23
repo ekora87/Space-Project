@@ -64,6 +64,16 @@ h1 {
     }
   }
 
+.topic-image {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  bottom: 0;
+}
+.container {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) and (min-height: 1024px){
   body {
     height: 1500px;
@@ -74,7 +84,24 @@ h1 {
     padding: 20px 0;
     font-size: 25px;
   }
+
+
 }
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .topic-container {
+    background-color: white;
+    color: black;
+    margin: 50px;
+  }
+}
+
 
 @media only screen and (min-width: 1024px) and (min-height: 1366px){
   /* .moon {
@@ -98,5 +125,7 @@ h1 {
     top: calc(68% - 100px);
     left: calc(49% - 100px);
   }
+
+  
 
 }
