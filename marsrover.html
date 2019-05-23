@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars Rover Pictures</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="rover.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -15,21 +15,48 @@
 </head>
 <body>
   <main>
-      <header>
+        <header>
           <h1>Mars Rover Pictures</h1>
-      </header>
-    <!-- <section>
-        <h3>Pick A Date:</h3>
-        <form class="mars-form">
-        <div class="date-box">
-            Date: <input type="text" id="tbDate" />
-        </div>
-        <input type="submit" class="submit-btn btn btn-primary" value="Submit">
-        <hr>
-    </form>
-    </section> -->
+        </header>
+        <h2>Select A Rover:</h2>
+        <section class="date-section hidden">
+                <h3>Pick A Date:</h3>
+                <p class="curiosity-date">Please select a date between 2012-08-06 and "current date" to view pictures.</p>
+                <p class="opportunity-date">Please select a date between 2004-01-25 and 2018-06-11 to view pictures.</p>
+                <p class="spirit-date">Please select a date between 2004-01-04 and 2010-03-21 to view pictures.</p>
+                <form class="mars-form">
+                <div class="date-box">
+                    Date: <input type="text" id="tbDate" placeholder="YYYY-MM-DD" />
+                </div>
+                <input type="submit" class="submit-btn btn btn-primary" value="Submit">
+            </form>
+            </section>
 
-    <section class="individual-rover"></section>
+        <section class="individual-rover">
+        <article class="rover-image-container" id="curiosity-div">
+        <div class="rover-header">
+          <h3 class="rover-name">Curiosity</h3>
+          <h4 class="active-status">ACTIVE</h4>
+          <img class="rover-image" id="curiosity" src="https://cdn.mos.cms.futurecdn.net/izXa9hiiSTbnNtwSp2ixKC.jpg">
+        </div>
+        </article>
+        <article class="rover-image-container" id="opportunity-div">
+            <div class="rover-header">
+            <h3 class="rover-name">Opportunity</h3>
+            <h4 class="complete-status">COMPLETE</h4>
+            <img class="rover-image" id="opportunity" src="https://pressfrom.info/upload/images/real/2018/10/30/nasa-is-still-holding-out-hope-for-the-mars-opportunity-rover__141568_.jpg?content=1">
+            </div>
+        </article>
+        <article class="rover-image-container" id="spirit-div">
+        <div class="rover-header">
+            <h3 class="rover-name">Spirit</h3>
+            <h4 class="complete-status">COMPLETE</h4>
+            <img class="rover-image" id="spirit" src ="https://solarsystem.nasa.gov/system/content_pages/main_images/1068_rover2-1.jpg">
+        </div>
+        </article>
+        </section>
+        <section class="mars-image-container"></section>
+
 
   
   </main>

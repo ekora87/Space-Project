@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 2em;
+  height: 100px;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://images.unsplash.com/photo-1506980372018-114d8d7430ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  background-color: #0A7DFA;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.apod-container > p {
+  margin: 0 10px;
+}
+
+.apod-container > h3 {
+  padding: 20px 0;
+  background-color: #0A7DFA;
+}
+
+@media only screen and (min-width: 768px) {
+  .image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
+
+body { 
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://www.gannett-cdn.com/presto/2018/12/15/USAT/2e7b9863-85ac-4faa-aad3-096fc1826c20-GettyImages-841647034.jpg?crop=2559,1439,x0,y269&width=3200&height=1680&fit=bounds');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  .image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+  }
+}

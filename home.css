@@ -3,7 +3,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 1200px;
+    height: 900px;
     overflow: hidden;
     text-align: center;
 }
@@ -17,6 +17,7 @@ h1 {
     width: 70%;
     margin: 30px auto;
 }
+
 .earth {
     position: absolute;
     top: calc(70% - 100px);
@@ -62,3 +63,40 @@ h1 {
       transform: rotateZ(360deg);
     }
   }
+
+@media only screen and (min-width: 768px) and (min-height: 1024px){
+  body {
+    height: 1500px;
+  }
+
+  .link-container > a {
+    margin: 50px auto;
+    padding: 20px 0;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px){
+  /* .moon {
+    height: 50px;
+    width: 50px;
+  } */
+
+  .moon img {
+    height: 50px;
+    transform: translateX(-125px) translateY(-125px);
+    width: 50px;
+  }
+
+  .earth img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .earth {
+    position: absolute;
+    top: calc(68% - 100px);
+    left: calc(49% - 100px);
+  }
+
+}
