@@ -25,6 +25,11 @@ h1 {
   margin-top: 20px;
 }
 
+#tbDate {
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .submit-btn {
   padding: 10px 30px;
   background-color: #0A7DFA;
@@ -43,13 +48,19 @@ h1 {
   margin-top: 20px;
 }
 
+.apod-container {
+  background: rgba(204, 204, 204, 0.5);
+}
 .apod-container > p {
   margin: 0 10px;
+  font-weight: bold;
+  
 }
 
 .apod-container > h3 {
   padding: 20px 0;
   background-color: #0A7DFA;
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -60,9 +71,9 @@ h1 {
   }
 
 body { 
-  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://www.gannett-cdn.com/presto/2018/12/15/USAT/2e7b9863-85ac-4faa-aad3-096fc1826c20-GettyImages-841647034.jpg?crop=2559,1439,x0,y269&width=3200&height=1680&fit=bounds');
+  background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url('https://www.gannett-cdn.com/presto/2018/12/15/USAT/2e7b9863-85ac-4faa-aad3-096fc1826c20-GettyImages-841647034.jpg?crop=2559,1439,x0,y269&width=3200&height=1680&fit=bounds');
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

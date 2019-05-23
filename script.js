@@ -110,6 +110,8 @@ function displayRoverManifests(responseJson) {
   $('h2').addClass('hidden');
   $(`#${selectedRover}`).addClass('flex');
   $('.rover-header').addClass('right-border');
+  $('.rover-image-container').css('width', '100%');
+
 
   $(`#${selectedRover}`).append(`<div class="rover-container">
   <ul>

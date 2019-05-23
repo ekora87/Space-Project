@@ -8,27 +8,41 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     line-height: 2em;
+    background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('https://edgy.app/wp-content/uploads/2018/02/Mars-featured-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
   }
 
+
   header > h1 {
-    
+    background-color: #0A7DFA;
+    border-radius: 5px;
     padding: 20px 0;
   }
   
   h2 {
-    background-color: salmon;
     padding: 10px 0;
   }
 
   .date-section {
-    background-color: salmon;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
+    background: rgba(204, 204, 204, 0.5);
+    color: black;
   }
 
   .date-section > p {
     font-weight: bold;
+    color: red;
+  }
+
+  #tbDate {
+    padding: 10px;
+    border-radius: 5px;
   }
   section > h3 {
     font-size: 22px;
@@ -43,6 +57,7 @@
 
   .date-box {
     margin: 20px;
+    font-size: 15px;
   }
   
   .image {
@@ -53,7 +68,7 @@
 
   .submit-btn {
       padding: 10px 30px;
-      background-color: rgb(24, 119, 243);
+      background-color: green;
       color: white;
       font-size: 15px;
       font-weight: bold;
@@ -63,22 +78,31 @@
 
   .rover-name {
     font-size: 22px;
+    background-color: #0A7DFA;
+    padding: 20px;
+    margin-top: 0;
+    color: white;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   h4 {
     color: white;
     padding: 10px 0;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 3px;
   }
 
   .active-status {
     background-color: green;
-    width: 100%;
   }
 
   .complete-status {
     background-color: red;
-    width: 100%;
   }
+
+
 
   .mars-image {
     width: 100px;
@@ -98,25 +122,29 @@
   .rover-image {
     width: 100%;
     height: 300px;
+    margin-bottom: 0;
   }
 
   .rover-container > ul {
     list-style-type: none;
     padding: 0 10px;
     text-align: left;
+    color: black;
+    font-weight: bold;
   }
 
   .rover-header {    
-    margin: 10px 0;
     text-align: center;
   }
 
   .rover-image-container {
     margin: 20px 0;
-    border: 1px solid black;
+    border: 3px solid white;
     line-height: 2em;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 5px;
+    background: rgba(204, 204, 204, 0.5);
+
   }
 
   .bold-text {
@@ -124,27 +152,28 @@
     color: red;
   }
 
-  /* .rover-header {
+  .rover-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px 0;
-    border: 1px solid black;
+    align-items: center;
     border-radius: 5px;
-  } */
+  }
 
   .hidden {
     display: none;
   }
 
 @media only screen and (min-width: 768px) {
-  .mars-image-container {
-    background-color: salmon;
-  }
   .rover-image {
-    width: 500px;
+    width: 100%;
+    /* max-width: 700px; */
     height: auto;
-    margin: auto 20px;
+  }
+
+  .date-section {
+    width: 50%;
+    margin: 0 auto;
   }
 
   .mars-image {
@@ -153,23 +182,25 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   body {
-    width: 90%;
-    height: 100px;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://upload.wikimedia.org/wikipedia/commons/4/46/Curiosity_at_Work_on_Mars_%28Artist%27s_Concept%29.jpg');
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url('https://mars.nasa.gov/system/resources/detail_files/22147_evolution-of-a-martian-16.jpg');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+  }
+
+  .rover-image-container {
+    width: 30%;
   }
   .individual-rover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
 
   }
 
@@ -179,9 +210,9 @@
   }
 
   .rover-image {
-    width: 400px;
+    width: 100%;
     height: 300px;
-    margin: auto 20px;
+    
   }
 
   .flex {
@@ -202,10 +233,8 @@
     margin: 0 10px;
   }
 
-  
-
   .right-border {
-    border-right: 1px solid black;
+    border-right: 3px solid white;
   }
 }
   
