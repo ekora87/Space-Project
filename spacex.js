@@ -1,9 +1,10 @@
-//let state = getMissionPatch();
+'use strict';
 let local = localStorage.getItem('index');
 let slideIndex = 1;
 const apiKey = 'AIzaSyDXusl38haaZY6PfuJdEuBb-bpdFkceYYg'; 
 const searchURL = 'https://www.googleapis.com/youtube/v3/search';
 let missionName = "";
+
 function getMissionPatch() {
     fetch('https://api.spacexdata.com/v3/launches')
     .then(response => response.json())
@@ -42,7 +43,7 @@ function displayMissionPatch(responseJson) {
       responseJson.rocket.first_stage.cores[0].land_success = "False";
       responseJson.details = "None";
     }
-    $('.individual-mission').prepend(`<img src="${responseJson.links.mission_patch_small} alt="${missionName} mission patch"><div class="mission-details">
+    $('.individual-mission').prepend(`<img src="${responseJson.links.mission_patch_small}" alt="${missionName} mission patch"><div class="mission-details">
     <h3 class="name">${responseJson.mission_name}</h3>
     <ul><li><span class="bold-text">Flight Numer:</span> ${responseJson.flight_number}</li>
     <li><span class="bold-text">Launch Year:</span> ${responseJson.launch_year}</li>
@@ -79,7 +80,6 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-
   var slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {
       slideIndex = 1;

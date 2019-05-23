@@ -111,6 +111,8 @@ function displayRoverManifests(responseJson) {
   $(`#${selectedRover}`).addClass('flex');
   $('.rover-header').addClass('right-border');
   $('.rover-image-container').css('width', '100%');
+  $('.link').css('pointer-events', 'none');
+  $('.rover-header:hover').css('opacity', '1');
 
 
   $(`#${selectedRover}`).append(`<div class="rover-container">
@@ -124,39 +126,9 @@ function displayRoverManifests(responseJson) {
   </<ul></div>`);
 }
 
-// function roverClick() {
-//   $('.individual-rover').on('click', '.rover-container', function() {
-//      nameRover = $(this).children('h4').text();
-//      local = localStorage.setItem('name', nameRover);
-    
-//   })
-//   return local;
-// }
-
-// function renderRoverDetail() {
-//   let test = roverClick();
-//   //alert(test);
-//   if (test == "Curiosity") {
-//     $('.test').append(`<p>${rover1}</p>`)
-//   } else if (test == "Opportunity") {
-//     $('.test').append(`<p>${rover2}</p>`)
-//   } else if (test == "Spirit") {
-//     $('.test').append(`<p>${rover3}</p>`)
-//   }
-// }
-
-
 $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
   watchMARSForm();
   clickRoverPicture();
-  
-  // roverClick();
-  // renderRoverDetail();
-  //getEachRoverManifest();
-  
-  //renderRoverDetail();
-  // renderAPOD();
-  // renderRover();
 });

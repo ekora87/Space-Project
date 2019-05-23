@@ -142,11 +142,20 @@
     opacity: 0.5;
   }
 
+  .rover-header > a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+  }
+
   .rover-image-container {
     margin: 20px 0;
     border: 3px solid white;
     line-height: 2em;
-    /* background-color: white; */
     border-radius: 5px;
     background: rgba(204, 204, 204, 0.5);
 
@@ -157,13 +166,13 @@
     color: red;
   }
 
-  .rover-header {
+  /* .rover-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-  }
+  } */
 
   .hidden {
     display: none;
