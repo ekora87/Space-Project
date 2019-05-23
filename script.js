@@ -112,7 +112,7 @@ function displayRoverManifests(responseJson) {
   $('.rover-header').addClass('right-border');
   $('.rover-image-container').css('width', '100%');
   $('.link').css('pointer-events', 'none');
-  $('.rover-header:hover').css('opacity', '1');
+  $(`#${selectedRover}`).css('opacity', '1');
 
 
   $(`#${selectedRover}`).append(`<div class="rover-container">

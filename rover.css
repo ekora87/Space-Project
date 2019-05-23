@@ -138,7 +138,7 @@
     text-align: center;
   }
 
-  .rover-header:hover {
+  article:hover {
     opacity: 0.5;
   }
 
@@ -149,7 +149,6 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-
   }
 
   .rover-image-container {
@@ -158,21 +157,12 @@
     line-height: 2em;
     border-radius: 5px;
     background: rgba(204, 204, 204, 0.5);
-
   }
 
   .bold-text {
     font-weight: bold;
     color: red;
   }
-
-  /* .rover-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-  } */
 
   .hidden {
     display: none;
