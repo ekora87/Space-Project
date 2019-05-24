@@ -136,10 +136,15 @@
 
   .rover-header {    
     text-align: center;
+    
   }
 
   article:hover {
     opacity: 0.5;
+  }
+
+  .rover-header {
+    max-width: 100%;
   }
 
   .rover-header > a {
@@ -152,6 +157,7 @@
   }
 
   .rover-image-container {
+    
     margin: 20px 0;
     border: 3px solid white;
     line-height: 2em;
@@ -186,7 +192,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   body {
     width: 100%;
     height: 100%;
@@ -207,7 +213,7 @@
     align-items: center;
 
   }
-
+  
   .rover-header > h4 {
     width: 80%;
     margin: 22px auto;
@@ -216,7 +222,6 @@
   .rover-image {
     width: 100%;
     height: 300px;
-    
   }
 
   .flex {
@@ -231,9 +236,9 @@
     height: 200px;
   }
   
-
   .rover-container {
     border: none;
+    height: 100%;
     margin: 0 10px;
   }
 
