@@ -10,6 +10,12 @@ $(document).ready(function () {
   });
 });
 
+function classToggle() {
+  $('.Navbar__Link-toggle').click(function() {
+      $('.drop-down-nav').toggleClass('Navbar__ToggleShow');
+  });
+}
+
 function getAPODImage(input) {
   fetch(`https://api.nasa.gov/planetary/apod?date=${input}&api_key=G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb`)
     .then(response => response.json())
@@ -127,7 +133,7 @@ function displayRoverManifests(responseJson) {
 }
 
 $(function() {
-  console.log('App loaded! Waiting for submit!');
+  classToggle();
   watchForm();
   watchMARSForm();
   clickRoverPicture();

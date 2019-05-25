@@ -5,11 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars Rover Pictures</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="rover.css">
 </head>
 <body>
-  <main>
+    <div class="nav-section">
+        <div class="logo">
+            <a href="index.html">NP</a>
+        </div>
+        <div class="navbar-menu Navbar__Link-toggle">
+                <span class="menu">MENU</span><i class="fas fa-bars"></i>
+        </div>
+    
+        <nav class="Navbar__Items" role=”navigation”>
+            <ul>
+                <li><a href="index.html">Home</a></li>                  
+                <li><a href="apod.html">APOD</a></li>
+                <li><a href="rover.html">Mars Rover</a></li>
+                <li><a href="spacex.html">SpaceX Missions</a></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="drop-down-nav" role=”navigation”>
+                <ul class="dropdown-list">                    
+                    <li class="drop-down-link"><a href="index.html">Home</a></li>
+                    <li class="drop-down-link"><a href="apod.html">APOD</a></li>
+                    <li class="drop-down-link"><a href="rover.html">Mars Rover</a></li>
+                    <li class="drop-down-link"><a href="spacex.html">SpaceX Missions</a></li>
+                </ul>
+        </div>
+    <main>
         <header role="heading" aria-level="1">
           <h1>Mars Rover Pictures</h1>
         </header>
@@ -19,7 +45,7 @@
                 <p class="curiosity-date">Please select a date between 2012-08-06 and "current date" to view pictures.</p>
                 <p class="opportunity-date">Please select a date between 2004-01-25 and 2018-06-11 to view pictures.</p>
                 <p class="spirit-date">Please select a date between 2004-01-04 and 2010-03-21 to view pictures.</p>
-                <form class="mars-form">
+                <form class="mars-form" role="form" aria-label="date input">
                 <div class="date-box">
                     <input type="text" id="tbDate" placeholder="YYYY-MM-DD" />
                 </div>
@@ -30,7 +56,7 @@
         <section class="individual-rover" role="region">
         <article class="rover-image-container" id="curiosity-div" role="article">
         <div class="rover-header">
-            <a href="#" class="link">
+            <a class="link">
           <h3 class="rover-name">Curiosity</h3>
           <h4 class="active-status">ACTIVE</h4>
           <img class="rover-image" id="curiosity" src="https://cdn.mos.cms.futurecdn.net/izXa9hiiSTbnNtwSp2ixKC.jpg" alt="rover curiosity">
@@ -39,7 +65,7 @@
         </article>
         <article class="rover-image-container" id="opportunity-div" role="article">
             <div class="rover-header">
-            <a href="#" class="link">
+            <a class="link">
             <h3 class="rover-name">Opportunity</h3>
             <h4 class="complete-status">COMPLETE</h4>
             <img class="rover-image" id="opportunity" src="https://pressfrom.info/upload/images/real/2018/10/30/nasa-is-still-holding-out-hope-for-the-mars-opportunity-rover__141568_.jpg?content=1" alt="rover opportunity">
@@ -48,7 +74,7 @@
         </article>
         <article class="rover-image-container" id="spirit-div" role="article">
         <div class="rover-header">
-            <a href="#" class="link">
+            <a class="link">
             <h3 class="rover-name">Spirit</h3>
             <h4 class="complete-status">COMPLETE</h4>
             <img class="rover-image" id="spirit" src ="https://solarsystem.nasa.gov/system/content_pages/main_images/1068_rover2-1.jpg" alt="rover spirit">
@@ -58,6 +84,7 @@
         </section>
         <section class="mars-image-container"></section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>

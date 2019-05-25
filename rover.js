@@ -6,7 +6,14 @@ $(document).ready(function () {
   $('input[id$=tbDate]').datepicker({
     dateFormat: 'yy-mm-dd'
   });
-});
+})
+
+function classToggle() {
+  $('.Navbar__Link-toggle').click(function() {
+    alert("clicked");
+      $('.drop-down-nav').toggleClass('Navbar__ToggleShow');
+  });
+}
 
 function getAPODImage(input) {
   fetch(`https://api.nasa.gov/planetary/apod?date=${input}&api_key=G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb`)
@@ -123,7 +130,7 @@ function roverClick() {
 }
 
 $(function() {
-  console.log('App loaded! Waiting for submit!');
+  classToggle();
   watchForm();
   watchMARSForm();
   getEachRoverManifest();
