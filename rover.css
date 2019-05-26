@@ -296,6 +296,10 @@
     align-items: center;
 
   }
+
+  .rover-header {
+    min-width: 400px;
+  }
   
   .rover-header > h4 {
     width: 80%;
