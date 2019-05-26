@@ -14,7 +14,7 @@ body {
   height: 100%;
   background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url('https://www.setaswall.com/wp-content/uploads/2017/08/1440x2960-HD-Wallpaper-092.jpg');
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
