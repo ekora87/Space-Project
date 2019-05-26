@@ -126,8 +126,7 @@ function displayResults(responseJson) {
     $('#results-list').append(
       `<div class="video"><li><h3>${responseJson.items[i].snippet.title}</h3>
       <p>${responseJson.items[i].snippet.description}</p>
-      <iframe id="ytplayer" type="text/html" width="100%" height="100%"
-  src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?autoplay=1frameborder="0"></iframe>
+      <iframe allowFullScreen="allowFullScreen" id="ytplayer" type="text/html" src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?autoplay=1frameborder="0"></iframe>
       </li></div>`
     )};
     $('#results').removeClass('hidden');
