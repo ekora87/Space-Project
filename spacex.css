@@ -195,8 +195,6 @@
     height: auto;
 }
 
-
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   width: auto;
@@ -219,17 +217,15 @@
     padding: 20px;
 }
 
-/* Position the "next button" to the right */
+
 .next {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;

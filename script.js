@@ -4,26 +4,36 @@ const apiKey = 'G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb';
 let nameRover = '';
 let roverDetail = '';
 
+//For date calendar
 $(document).ready(function () {
   $('input[id$=tbDate]').datepicker({
     dateFormat: 'yy-mm-dd'
   });
 });
 
+//Toggle the nav bar
 function classToggle() {
   $('.Navbar__Link-toggle').click(function() {
       $('.drop-down-nav').toggleClass('Navbar__ToggleShow');
   });
 }
 
+//Get APOD images from API
 function getAPODImage(input) {
   fetch(`https://api.nasa.gov/planetary/apod?date=${input}&api_key=G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb`)
-    .then(response => response.json())
-    .then(responseJson => 
-      displayAPODResults(responseJson))
-    .catch(error => alert('Something went wrong. Try again later.'));
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(response.statusText);
+    })
+    .then(responseJson => displayAPODResults(responseJson))
+    .catch(err => {
+      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
 }
 
+//display APOD result to the DOM
 function displayAPODResults(responseJson) {
   $('.apod-container').append(
     `<h3>${responseJson.title}</h3><h4>Date: ${responseJson.date}</h4><p>${responseJson.explanation}</p><img src="${responseJson.hdurl}" class="image">`
@@ -39,12 +49,22 @@ function watchForm() {
   });
 }
 
+//Get rover details from API
 function getMarsRoverImage(name, input) {
   fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?earth_date=${input}&api_key=G67zW65ua8xJ4UGvo22EtNsV5zpufrS1LYIDNgUb`)
-  .then(response => response.json())
-  .then(responseJson => displayMARSResults(responseJson.photos));
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error(response.statusText);
+    })
+  .then(responseJson => displayMARSResults(responseJson.photos))
+  .catch(err => {
+    $('#js-error-message').text(`Something went wrong: ${err.message}`);
+  });
 }
 
+//display the rovers to the DOM
 function displayMARSResults(responseJson){
   let same = '';
   for (let i=0; i<responseJson.length; i++) {
@@ -68,6 +88,7 @@ function watchMARSForm() {
 
 const url = 'https://api.nasa.gov/mars-photos/api/v1/manifests/';
 
+//Get the name of the rover based on user choice
 function clickRoverPicture() {
   $('.rover-image').click(function() {
     nameRover = $(this).attr('id');
@@ -86,16 +107,24 @@ function clickRoverPicture() {
   return nameRover;
 }
 
+//Get the individual rover details from API
 function getEachRoverManifest(name) { 
-    
     const manifestURL = url + name + '?' + "api_key=" + apiKey;
     fetch(manifestURL)
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(response.statusText);
+    })
     .then(responseJson => displayRoverManifests(responseJson))
-    .catch(error => alert('Something went wrong. Try again later.'));
+    .catch(err => {
+      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
   
 }
 
+//Display the rover details to the DOM
 function displayRoverManifests(responseJson) {
   let selectedRover = clickRoverPicture();
   if (selectedRover === 'curiosity') {

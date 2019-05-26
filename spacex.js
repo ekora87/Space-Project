@@ -5,18 +5,29 @@ const apiKey = 'AIzaSyDXusl38haaZY6PfuJdEuBb-bpdFkceYYg';
 const searchURL = 'https://www.googleapis.com/youtube/v3/search';
 let missionName = "";
 
+//toggle the navbar
 function classToggle() {
   $('.Navbar__Link-toggle').click(function() {
       $('.drop-down-nav').toggleClass('Navbar__ToggleShow');
   });
 }
 
+//get all mission patch from API
 function getMissionPatch() {
     fetch('https://api.spacexdata.com/v3/launches')
-    .then(response => response.json())
-    .then(responseJson => displayMissionPatch(responseJson));
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(response.statusText);
+    })
+    .then(responseJson => displayMissionPatch(responseJson))
+    .catch(err => {
+      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
   }
-  
+
+//display each mission patch to the DOM
 function displayMissionPatch(responseJson) {
     for (let i=0; i < responseJson.length; i++ ){
       if (responseJson[i].links.mission_patch !== null) {
@@ -25,21 +36,30 @@ function displayMissionPatch(responseJson) {
     }
 }
  
+function watchMissionPatch() {
+  $('.mission').on('click', '.mission-container', function() {
+      let num = $(this).attr('id');
+      $('.mission').hide();
+      local = localStorage.setItem('index', num);
+  });  
+}
 
-  function watchMissionPatch() {
-    $('.mission').on('click', '.mission-container', function() {
-        let num = $(this).attr('id');
-        $('.mission').hide();
-        local = localStorage.setItem('index', num);
-    });  
-  }
- 
-  function getIndividualMission(local) {
-    fetch('https://api.spacexdata.com/v3/launches')
-    .then(response => response.json())
-    .then(responseJson => displayMissionDetail(responseJson[parseInt(local)]));
-  }
+//Get the mission detail from API based on user choice
+function getIndividualMission(local) {
+  fetch('https://api.spacexdata.com/v3/launches')
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error(response.statusText);
+    })
+    .then(responseJson => displayMissionDetail(responseJson[parseInt(local)]))
+    .catch(err => {
+      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
+}
   
+//Display the mission detail
   function displayMissionDetail(responseJson) {
     missionName = responseJson.mission_name;
     let imageCount = responseJson.links.flickr_images.length;
@@ -80,11 +100,13 @@ function displayMissionPatch(responseJson) {
       }
     watchForm();
   }
-  
+
+//This function is used to move on to the next slide
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+//Display slide show for the spacex mission
 function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {
@@ -96,10 +118,10 @@ function showSlides(n) {
       n = slides.length;
     }
   for (let i =0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      $(slides[i]).css('display', 'none');  
   }
 
-slides[slideIndex - 1].style.display = "block";  
+$(slides[slideIndex - 1]).css('display', 'block');  
 $('.numbertext').text(`${n}/${slides.length}`);
 }
 
@@ -111,18 +133,11 @@ function formatQueryParams(params) {
 }
 
 function displayResults(responseJson) {
-  // if there are previous results, remove them
-  console.log(responseJson);
   $('.youtube-link').click(function() {
     $(this).attr('href', `https://www.youtube.com/results?search_query=${missionName}`);
   });
   $('#results-list').empty();
-  // iterate through the items array
   for (let i = 0; i < responseJson.items.length; i++){
-    // for each video object in the items 
-    //array, add a list item to the results 
-    //list with the video title, description,
-    //and thumbnail
     $('#results-list').append(
       `<div class="video"><li><h3>${responseJson.items[i].snippet.title}</h3>
       <p>${responseJson.items[i].snippet.description}</p>
@@ -132,6 +147,7 @@ function displayResults(responseJson) {
     $('#results').removeClass('hidden');
 };
 
+//Get Youtube Video
 function getYouTubeVideos(query, maxResults=10) {
   const params = {
     key: apiKey,
