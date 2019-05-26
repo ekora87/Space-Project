@@ -4,11 +4,12 @@
   
   body {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: black;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('http://i.imgur.com/Nssk73Q.png');
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://pbs.twimg.com/media/D7V7axyWkAAt5Di.jpg');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
