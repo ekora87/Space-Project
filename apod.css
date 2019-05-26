@@ -2,8 +2,6 @@
     box-sizing: border-box;
   }
 
-
-
 body {
   width: 100%;
   height: 100%;
@@ -27,7 +25,6 @@ body {
   align-items: center;
   margin-bottom: 50px;
   color: white;
-  
 }
 
 .logo {
@@ -35,7 +32,6 @@ body {
   height: 50px;
   border: 5px solid white;
   line-height: 40px;
-  
 }
 
 a {
@@ -128,7 +124,6 @@ h1 {
 .apod-container > p {
   margin: 0 10px;
   font-weight: bold;
-  
 }
 
 .apod-container > h3 {
@@ -144,13 +139,13 @@ h1 {
     height: auto;
   }
 
-body { 
-  background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url('https://www.gannett-cdn.com/presto/2018/12/15/USAT/2e7b9863-85ac-4faa-aad3-096fc1826c20-GettyImages-841647034.jpg?crop=2559,1439,x0,y269&width=3200&height=1680&fit=bounds');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-}
+  body { 
+    background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url('https://www.gannett-cdn.com/presto/2018/12/15/USAT/2e7b9863-85ac-4faa-aad3-096fc1826c20-GettyImages-841647034.jpg?crop=2559,1439,x0,y269&width=3200&height=1680&fit=bounds');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -162,14 +157,14 @@ body {
 
   .navbar-menu, .drop-down-nav {
     display: none;
-}
+  }
 
-.Navbar__Items {
+  .Navbar__Items {
     display: block;
-}
+  }
 
-.Navbar__Items > ul > li {
+  .Navbar__Items > ul > li {
     display: inline-block;
     margin: 0 20px;
-}
+  }
 }

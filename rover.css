@@ -273,18 +273,18 @@
     background-attachment: fixed;
   }
 
-.navbar-menu, .drop-down-nav {
+  .navbar-menu, .drop-down-nav {
     display: none;
-}
+  }
 
-.Navbar__Items {
+  .Navbar__Items {
     display: block;
-}
+  }
 
-.Navbar__Items > ul > li {
+  .Navbar__Items > ul > li {
     display: inline-block;
     margin: 0 20px;
-}
+  }
 
   .rover-image-container {
     width: 30%;
