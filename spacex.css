@@ -4,15 +4,14 @@
   
   body {
     width: 100%;
-    max-width: 414px;
-    height: auto;
+    height: 1024px;
     margin: 0 auto;
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: black;
     background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://pbs.twimg.com/media/D7V7axyWkAAt5Di.jpg');
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;  
   }
