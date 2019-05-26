@@ -5,6 +5,12 @@ const apiKey = 'AIzaSyDXusl38haaZY6PfuJdEuBb-bpdFkceYYg';
 const searchURL = 'https://www.googleapis.com/youtube/v3/search';
 let missionName = "";
 
+function classToggle() {
+  $('.Navbar__Link-toggle').click(function() {
+      $('.drop-down-nav').toggleClass('Navbar__ToggleShow');
+  });
+}
+
 function getMissionPatch() {
     fetch('https://api.spacexdata.com/v3/launches')
     .then(response => response.json())
@@ -157,6 +163,7 @@ function watchForm() {
 }
   
   $(function() {
+    classToggle();
     getMissionPatch();
     watchMissionPatch();
     getIndividualMission(local);

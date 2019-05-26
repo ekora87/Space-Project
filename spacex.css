@@ -8,12 +8,87 @@
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: black;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('http://i.imgur.com/Nssk73Q.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+  }
+
+  .nav-section {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    color: white;
+    
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
+    line-height: 40px;
+    
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+    
+  .menu {
+    margin-right: 10px;
+  }
+  
+  ul {
+    font-size: 16px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .drop-down-nav > ul > li {
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  
+  .Navbar__Items {
+    display: none;
+  }
+    
+  .drop-down-nav {
+    display: none;
+    height: auto;
+  }
+  
+  .drop-down-link {
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px dotted grey;
+    
+  }
+  
+  .Navbar__ToggleShow {
+    display: block;  
+  }
+  
+  .drop-down-nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-section, .drop-down-nav {
+    margin: 10px 10px 0 10px;
   }
 
   body > h2 {
     margin-bottom: 0;
   }
-  .logo {
+  .spacex-logo {
     width: 300px;
     height: auto;
   }
@@ -223,7 +298,7 @@ hr {
       margin-top: 150px;
     }
 
-    .logo {
+    .spacex-logo {
       display: none;
     }
 
@@ -290,8 +365,21 @@ hr {
     }
   }
 
-  @media only screen and (min-width: 1200px) {
-    .individual-mission {
-      margin-top: 150px;
-    }
+@media only screen and (min-width: 1200px) {
+  .navbar-menu, .drop-down-nav {
+    display: none;
   }
+
+  .Navbar__Items {
+    display: block;
+  }
+
+  .Navbar__Items > ul > li {
+    display: inline-block;
+    margin: 0 20px;
+  
+  } 
+  .individual-mission {
+    margin-top: 150px;
+  }
+}

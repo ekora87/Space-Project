@@ -4,14 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>SpaceX Missions</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="spacex.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kodchasan|Lato&display=swap" rel="stylesheet">
     <link href="spacex.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <img class="logo" src="http://www.stickpng.com/assets/images/5842a770a6515b1e0ad75afe.png" alt="SpaceX Logo">
+    <div class="nav-section">
+        <div class="logo">
+            <a href="index.html">NP</a>
+        </div>
+        <div class="navbar-menu Navbar__Link-toggle">
+                <span class="menu">MENU</span><i class="fas fa-bars"></i>
+        </div>
+    
+        <nav class="Navbar__Items" role=”navigation”>
+            <ul>
+                <li><a href="index.html">Home</a></li>                  
+                <li><a href="apod.html">APOD</a></li>
+                <li><a href="rover.html">Mars Rover</a></li>
+                <li><a href="spacex.html">SpaceX Missions</a></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="drop-down-nav" role=”navigation”>
+                <ul class="dropdown-list">                    
+                    <li class="drop-down-link"><a href="index.html">Home</a></li>
+                    <li class="drop-down-link"><a href="apod.html">APOD</a></li>
+                    <li class="drop-down-link"><a href="rover.html">Mars Rover</a></li>
+                    <li class="drop-down-link"><a href="spacex.html">SpaceX Missions</a></li>
+                </ul>
+        </div>
+    <img class="spacex-logo" src="http://www.stickpng.com/assets/images/5842a770a6515b1e0ad75afe.png" alt="SpaceX Logo">
     <h2>Select A Mission</h2>
     <section class="mission" role="region"></section>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="spacex.js"></script>
+    
   </body>
 </html>
