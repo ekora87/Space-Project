@@ -212,15 +212,11 @@
 
   .rover-header {    
     text-align: center;
-    
+    max-width: 100%;
   }
 
   article:hover {
     opacity: 0.5;
-  }
-
-  .rover-header {
-    max-width: 100%;
   }
 
   .rover-header > a {
@@ -233,7 +229,6 @@
   }
 
   .rover-image-container {
-    
     margin: 20px 0;
     border: 3px solid white;
     line-height: 2em;
@@ -300,11 +295,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
   }
 
   .rover-header {
-    min-width: 400px;
+    min-width: 350px;
   }
   
   .rover-header > h4 {

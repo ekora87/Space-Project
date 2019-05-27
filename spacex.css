@@ -86,7 +86,7 @@ ul {
 }
 
 body > h2 {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 .spacex-logo {
   width: 300px;
@@ -280,6 +280,37 @@ iframe {
   width: 100%;
   height: 360px;
 }
+form, h2 {
+  padding: 10px 0;
+  background: rgba(204, 204, 204, 0.25);
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+#name {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+label {
+  color: red;
+  font-weight: bold;
+}
+
+#search-btn {
+  padding: 10px 30px;
+  border: 1px solid #005288;
+  border-radius: 5px;
+  background-color: #005288;
+  color: white;
+  font-weight: bold;
+}
+
+#search-btn:hover {
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 768px) {
   body {
@@ -364,6 +395,10 @@ iframe {
 }
 
 @media only screen and (min-width: 1200px) {
+
+  body > h2 {
+    margin-top: 100px;
+  }
   .navbar-menu, .drop-down-nav {
     display: none;
   }

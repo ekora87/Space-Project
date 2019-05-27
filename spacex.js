@@ -12,6 +12,22 @@ function classToggle() {
   });
 }
 
+//retrieve user search
+function submitClick() {
+  $('form').submit(event => {
+    event.preventDefault();
+    let num = $('#name').val();
+    if ((num < 0) || (num >= 80)) {
+      $('.error-message').removeClass('hidden');
+    } else {
+    $('#search-btn').onclick = window.location.href='mission.html'; 
+    num = num - 1;
+    local = localStorage.setItem('index', num);
+    getIndividualMission(local);
+    }
+  }) 
+}
+
 //get all mission patch from API
 function getMissionPatch() {
     fetch('https://api.spacexdata.com/v3/launches')
@@ -179,6 +195,7 @@ function watchForm() {
 }
   
   $(function() {
+    submitClick();
     classToggle();
     getMissionPatch();
     watchMissionPatch();
