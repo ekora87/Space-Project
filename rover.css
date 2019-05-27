@@ -150,6 +150,12 @@
     cursor: pointer;
   }
 
+  .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
   .rover-name {
     font-size: 22px;
     background-color: #0A7DFA;

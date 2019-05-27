@@ -67,6 +67,9 @@ function getMarsRoverImage(name, input) {
 //display the rovers to the DOM
 function displayMARSResults(responseJson){
   let same = '';
+  if (responseJson.length === 0) {
+    $('.error-message').removeClass('hidden');
+  } else {
   for (let i=0; i<responseJson.length; i++) {
     if (responseJson[i].img_src !== same) {
       $('.mars-image-container').append(
@@ -74,6 +77,7 @@ function displayMARSResults(responseJson){
       same = responseJson[i].img_src;
     }
   }
+}
 }
 
 function watchMARSForm() {
